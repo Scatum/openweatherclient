@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LightTheme" parent="NoActionbarTheme">
+        <item name="light_black_dark_white">@color/black</item>
+        <item name="light_green_dark_red">@color/green</item>
+        <item name="light_gray_dark_white">@color/gray</item>
+        <item name="light_white_dark_black">@color/white</item>
+        <item name="light_dark_gray_dark_white">@color/dark_gray</item>
+        <item name="light_red_dark_green">@android:color/holo_red_dark</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+
+    </style>
+
+    <style name="DarkTheme" parent="NoActionbarTheme">
+        <item name="light_black_dark_white">@color/white</item>
+        <item name="light_green_dark_red">@android:color/holo_red_dark</item>
+        <item name="light_gray_dark_white">@color/white</item>
+        <item name="light_white_dark_black">@color/black</item>
+        <item name="light_dark_gray_dark_white">@color/white</item>
+        <item name="light_red_dark_green">@color/green</item>
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+
+</resources>
+
+

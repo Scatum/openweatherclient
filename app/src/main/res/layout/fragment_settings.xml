@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/light_white_dark_black">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/headerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="start|center_vertical"
+        android:paddingStart="34dp"
+        android:text="Settings"
+        android:textColor="?attr/light_black_dark_white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/settingsContainer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/settingsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerTextView">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/periodToUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingStart="34dp">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:text="Receive notifications"
+                android:textColor="?attr/light_black_dark_white"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintBottom_toTopOf="@id/settingsContainer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <RadioGroup
+                android:id="@+id/timerChoiceRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/option1Min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:tag="1"
+                    android:text="1 min"
+                    android:textColor="?attr/light_black_dark_white" />
+
+                <RadioButton
+                    android:id="@+id/option5Min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:tag="5"
+                    android:text="5 min"
+                    android:textColor="?attr/light_black_dark_white" />
+
+                <RadioButton
+                    android:id="@+id/option15Min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:tag="15"
+                    android:text="15 min"
+                    android:textColor="?attr/light_black_dark_white" />
+
+            </RadioGroup>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/gray" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/darkMode"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:orientation="horizontal"
+            android:paddingStart="34dp">
+
+
+            <Switch
+                android:id="@+id/switchDarkMode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:checked="true"
+                android:switchMinWidth="56dp"
+                android:text="Enable Dark Mode"
+                android:textColor="?attr/light_black_dark_white"
+                android:textOff="OFF"
+                android:textOn="ON" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

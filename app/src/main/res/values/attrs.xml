@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="light_black_dark_white" format="color"/>
+    <attr name="light_white_dark_black" format="color"/>
+
+    <attr name="light_green_dark_red" format="color"/>
+    <attr name="light_red_dark_green" format="color"/>
+    <attr name="light_gray_dark_white" format="color" />
+    <attr name="light_dark_gray_dark_white" format="color" />
+</resources>
