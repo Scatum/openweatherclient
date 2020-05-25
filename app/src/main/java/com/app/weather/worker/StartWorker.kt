@@ -15,6 +15,7 @@ class StartWorker(
 ) :
     Worker(context, workerParams), KoinComponent {
     private val preferenceService: PreferenceService by inject()
+
     @NonNull
     override fun doWork(): Result {
         val constraints: Constraints = Constraints.Builder()

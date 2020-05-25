@@ -11,15 +11,15 @@ import android.media.RingtoneManager
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.app.weather.activity.MainActivity
 import com.app.weather.R
+import com.app.weather.activity.MainActivity
 import com.app.weather.model.entity.WeatherEntity
 import java.util.*
 
 class NotificationService(private val context: Context) {
     private var notificationManager: NotificationManager? = null
 
-    fun createNotification(weatherEntity: WeatherEntity, downloaded : Boolean = false) {
+    fun createNotification(weatherEntity: WeatherEntity, downloaded: Boolean = false) {
         //You should use an actual ID instead
         val notificationId = Random().nextInt(60000)
         val notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)

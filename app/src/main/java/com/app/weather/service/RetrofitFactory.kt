@@ -10,7 +10,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-object RetrofitFactory: KoinComponent {
+object RetrofitFactory : KoinComponent {
 
 
     fun makeRetrofitService(): AppRetrofitService {

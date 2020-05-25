@@ -2,13 +2,13 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@id/noInternetConnectionFragment"
-    android:id="@+id/navigation_noInternetConnection">
+    android:id="@+id/navigation_noInternetConnection"
+    app:startDestination="@id/noInternetConnectionFragment">
     <fragment
         android:id="@+id/noInternetConnectionFragment"
         android:name="com.app.weather.view.NoInternetConnectionFragment"
         android:label="NoInternetConnectionFragment"
-        tools:layout="@layout/fragment_no_internet_connection" >
+        tools:layout="@layout/fragment_no_internet_connection">
 
     </fragment>
 

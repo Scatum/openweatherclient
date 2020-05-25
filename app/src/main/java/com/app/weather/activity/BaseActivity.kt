@@ -1,7 +1,7 @@
 package com.app.weather.activity
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.app.weather.R
 import com.app.weather.constant.AppTheme
 import com.app.weather.extension.hide
@@ -19,7 +19,7 @@ open class BaseActivity : AppCompatActivity() {
 
     }
 
-    public fun showLoading(showLoading:Boolean = true) {
+    public fun showLoading(showLoading: Boolean = true) {
         if (showLoading) {
             bottomLoadingView?.showShimmer(true)
             bottomLoadingView.show()
@@ -42,7 +42,6 @@ open class BaseActivity : AppCompatActivity() {
             //  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
     }
-
 
 
 }

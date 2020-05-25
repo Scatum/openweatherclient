@@ -16,12 +16,12 @@ class PreferenceService(private val context: Context) {
 
     fun getInterfaceMode(): AppTheme? {
         val editor = context?.getSharedPreferences("interfaceMode", Context.MODE_PRIVATE)
-        val mode = editor?.getString("interfaceModeKeyString",  AppTheme.LIGHT.name)
+        val mode = editor?.getString("interfaceModeKeyString", AppTheme.LIGHT.name)
         return mode?.let { AppTheme.valueOf(it) }
     }
 
 
-    fun saveOptionType(interval:Long = 1) {
+    fun saveOptionType(interval: Long = 1) {
         val editor = context?.getSharedPreferences("interval", Context.MODE_PRIVATE)?.edit()
         editor?.putLong("interval", interval)
         editor?.commit()

@@ -8,12 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.app.weather.R
 import com.app.weather.activity.MainActivity
-import com.app.weather.service.NetworkService
-import org.koin.android.ext.android.inject
 
-/**
- * A simple [Fragment] subclass.
- */
 abstract class BaseFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,7 +28,7 @@ abstract class BaseFragment : Fragment() {
         (activity as MainActivity?)?.hideLoading()
     }
 
-    fun navigateToNoInternetConnectionFragment(){
+    fun navigateToNoInternetConnectionFragment() {
         view?.let {
             Navigation.findNavController(it).navigate(R.id.action_navigate_to_noInternetConnection)
         }

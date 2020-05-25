@@ -42,7 +42,7 @@ object Converter {
                 daily.rain,
                 daily.uvi,
                 Description(
-                    daily.weather[0].id,
+                    daily.weather[0].id,//we need only first item
                     daily.weather[0].description,
                     daily.weather[0].main,
                     iconId2IconUrl(daily.weather[0].icon)

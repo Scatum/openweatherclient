@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="?attr/light_white_dark_black"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context=".view.NoInternetConnectionFragment">
 
 
@@ -13,25 +13,25 @@
         android:id="@+id/backBtn"
         android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:text="go back"
-        android:gravity="center"
         android:background="@drawable/weather_forecasts_item_bg"
-        android:paddingEnd="20dp"
+        android:gravity="center"
         android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="go back" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/enableNetworkBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Enable Network"
-        android:gravity="center"
-        android:background="@drawable/weather_forecasts_item_bg"
-        android:paddingEnd="20dp"
-        android:paddingStart="20dp"
         android:layout_marginTop="56dp"
+        android:background="@drawable/weather_forecasts_item_bg"
+        android:gravity="center"
+        android:paddingStart="20dp"
         android:paddingTop="10dp"
-        android:paddingBottom="10dp"/>
+        android:paddingEnd="20dp"
+        android:paddingBottom="10dp"
+        android:text="Enable Network" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

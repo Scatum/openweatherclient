@@ -2,13 +2,10 @@ package com.app.weather.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.view.View
 import android.widget.RadioButton
 import com.app.weather.R
 import com.app.weather.activity.MainActivity
-import com.app.weather.activity.SplashActivity
 import com.app.weather.constant.AppTheme
 import com.app.weather.service.PreferenceService
 import com.app.weather.service.WorkerService

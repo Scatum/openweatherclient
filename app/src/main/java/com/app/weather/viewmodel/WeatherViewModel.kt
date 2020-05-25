@@ -44,7 +44,7 @@ class WeatherViewModel(
         suspend fun publishUpdatedData() {
             if (networkService.isNetworkAvailable()) {
                 val data = networkDataRepository.getUpdatedForecastsWeatherData()
-                val resStatus = if (data.isNullOrEmpty()) LiveDataResponseStatus.UNKNOUN_ERROR
+                val resStatus = if (data.isNullOrEmpty()) LiveDataResponseStatus.UNKNOWN_ERROR
                 else LiveDataResponseStatus.SUCCESS
                 emit(
                     Triple(

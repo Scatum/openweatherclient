@@ -1,7 +1,6 @@
 package com.app.weather.activity
 
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.navigation.NavController

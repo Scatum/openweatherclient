@@ -12,7 +12,7 @@ interface AppDAO {
     suspend fun getAll(): List<WeatherEntity>
 
     @Query("SELECT * FROM weatherentity WHERE weather_id = :id")
-    suspend   fun findByWeatherId(id: Int): WeatherEntity
+    suspend fun findByWeatherId(id: Int): WeatherEntity
 
     /**
      *

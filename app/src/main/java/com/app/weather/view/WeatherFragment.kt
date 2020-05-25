@@ -15,9 +15,6 @@ import com.app.weather.viewmodel.WeatherViewModel
 import kotlinx.android.synthetic.main.fragment_weather.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
-/**
- * A WeatherFragment [Fragment] subclass.
- */
 class WeatherFragment : BaseFragment() {
 
     private val weatherViewModel: WeatherViewModel by viewModel()
@@ -43,7 +40,7 @@ class WeatherFragment : BaseFragment() {
 
         showLoading()
         weatherViewModel.getForecastsWeatherData()
-            .observe(viewLifecycleOwner, Observer {triple->
+            .observe(viewLifecycleOwner, Observer { triple ->
                 headerTextView?.text = triple.first.name//to show from where getting data
                 if (triple.first == DataType.UPDATED) {
                     setupUpdatedData(triple)
@@ -61,7 +58,7 @@ class WeatherFragment : BaseFragment() {
         hideLoading()
         if (data.second == LiveDataResponseStatus.SUCCESS) {
             data.third?.let { weatherListAdapte.addAll(it) }//everything is okay just adding new data to the list
-        }else if (data.second == LiveDataResponseStatus.NO_INTERNET_CONNECTION) {
+        } else if (data.second == LiveDataResponseStatus.NO_INTERNET_CONNECTION) {
             /**
              * there was a problem with network
              * */
@@ -69,7 +66,7 @@ class WeatherFragment : BaseFragment() {
             if (weatherListAdapte.isEmpty()) {
                 // if local db is empty show NoInternetConnectionFragment
                 navigateToNoInternetConnectionFragment()
-            }else {
+            } else {
                 //Weather ListAdapter has old data, we will show them
             }
         }

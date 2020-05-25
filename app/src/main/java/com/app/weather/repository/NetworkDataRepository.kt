@@ -5,9 +5,8 @@ import com.app.weather.BuildConfig
 import com.app.weather.convertor.Converter
 import com.app.weather.emitter.ErrorType
 import com.app.weather.emitter.RemoteErrorEmitter
-import com.app.weather.service.AppRetrofitService
 import com.app.weather.model.entity.WeatherEntity
-import com.app.weather.service.NetworkService
+import com.app.weather.service.AppRetrofitService
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.ResponseBody
@@ -31,10 +30,12 @@ class NetworkDataRepository(
      * **null if network request is failed or local data is empty
      * **Updated data
      * */
-    suspend fun getUpdatedForecastsWeatherData():List<WeatherEntity>? {
+    suspend fun getUpdatedForecastsWeatherData(): List<WeatherEntity>? {
         val response = safeApiCall(this@NetworkDataRepository) {
-            appRetrofitService.fetchCurrentAndForecastsWeatherData(40.177200,44.503490,
-                BuildConfig.EXCLUDE,BuildConfig.METRIC, BuildConfig.API_KAY)
+            appRetrofitService.fetchCurrentAndForecastsWeatherData(
+                40.177200, 44.503490,
+                BuildConfig.EXCLUDE, BuildConfig.METRIC, BuildConfig.API_KAY
+            )
         }
         if (response != null && response.isSuccessful && response.body() != null) {
             val weatherEntities = Converter.weatherDTO2Entity(response.body()!!)

@@ -1,134 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:card_view="http://schemas.android.com/tools"
-    android:paddingTop="1dp"
-    android:paddingStart="1dp"
-    android:paddingEnd="1dp"
-    android:paddingBottom="1dp"
-    android:layout_marginBottom="22dp"
     android:layout_marginStart="14dp"
     android:layout_marginEnd="14dp"
-    android:background="@drawable/today_weather_item_bg">
+    android:layout_marginBottom="22dp"
+    android:background="@drawable/today_weather_item_bg"
+    android:paddingStart="1dp"
+    android:paddingTop="1dp"
+    android:paddingEnd="1dp"
+    android:paddingBottom="1dp">
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/timezoneAndDay"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textSize="14sp"
-        android:textStyle="bold"
         android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:lines="3"
         android:text="Timezone and Day"
-        android:layout_marginTop="12dp"
         android:textColor="?attr/light_black_dark_white"
+        android:textSize="14sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toStartOf="@id/ImageContainer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/mainTemperature"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:text="day"
+        android:textColor="?attr/light_green_dark_red"
         android:textSize="48sp"
         android:textStyle="bold"
-        android:layout_marginStart="14dp"
-        android:text="day"
-        android:layout_marginTop="12dp"
-        android:textColor="?attr/light_green_dark_red"
-        app:layout_constraintTop_toBottomOf="@id/timezoneAndDay"
         app:layout_constraintEnd_toStartOf="@id/ImageContainer"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timezoneAndDay" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/temperatureInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textSize="32sp"
-        android:textStyle="normal"
         android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:lines="2"
         android:text="Timezone and Day"
-        android:layout_marginTop="12dp"
         android:textColor="?attr/light_black_dark_white"
+        android:textSize="32sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/mainTemperature"/>
+        app:layout_constraintTop_toBottomOf="@id/mainTemperature" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/sunInfo"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textSize="28sp"
-        android:textStyle="normal"
         android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:lines="2"
         android:text="sunrise sunset "
-        android:layout_marginTop="12dp"
         android:textColor="?attr/light_black_dark_white"
+        android:textSize="28sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/temperatureInfo"/>
+        app:layout_constraintTop_toBottomOf="@id/temperatureInfo" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/humidity"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textSize="22sp"
-        android:textStyle="normal"
         android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:lines="2"
         android:text="humidity"
-        android:layout_marginTop="12dp"
         android:textColor="?attr/light_black_dark_white"
+        android:textSize="22sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/sunInfo"/>
-
+        app:layout_constraintTop_toBottomOf="@id/sunInfo" />
 
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:textSize="22sp"
-        android:textStyle="normal"
         android:layout_marginStart="14dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
         android:lines="3"
         android:text="humidity "
-        android:layout_marginTop="12dp"
         android:textColor="?attr/light_black_dark_white"
+        android:textSize="22sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/humidity"/>
+        app:layout_constraintTop_toBottomOf="@id/humidity" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/ImageContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:cardCornerRadius="0dp"
-        card_view:cardElevation="0dp"
         android:layout_margin="8dp"
+        app:cardCornerRadius="0dp"
         app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/timezoneAndDay"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        card_view:cardElevation="0dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/weatherIcon"
             android:layout_width="100dp"
             android:layout_height="120dp"
-            android:src="@drawable/ic_weather"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_weather" />
+
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/today"
             android:layout_width="wrap_content"

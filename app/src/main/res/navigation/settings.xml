@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.app.weather.view.SettingsFragment"
-        android:label="SettingsFragment" >
+        android:label="SettingsFragment">
         <action
             android:id="@+id/action_navigate_to_noInternetConnection"
             app:destination="@id/navigation_noInternetConnection" />

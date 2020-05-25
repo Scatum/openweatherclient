@@ -15,12 +15,10 @@ class LocalDataRepository(
 
     suspend fun saveAllData(weatherEntity: List<WeatherEntity>): Unit {
 
-        val insertedInfo = appDatabase.weatherDao().insertAll(weatherEntity.toTypedArray())
+     appDatabase.weatherDao().insertAll(weatherEntity.toTypedArray())
         if (!appSettingsService.foreground()) {
             for (item in weatherEntity) {
-                notificationService.createNotification(
-                    item
-                )
+                notificationService.createNotification(item)
             }
         }
 

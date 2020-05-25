@@ -8,12 +8,11 @@ import com.app.weather.repository.NetworkDataRepository
 import kotlinx.coroutines.*
 import org.koin.core.KoinComponent
 import org.koin.core.inject
-import java.lang.Exception
 
 
 class AppWorker(
-     private val mContext: Context,
-     private val workerParams: WorkerParameters
+    private val mContext: Context,
+    private val workerParams: WorkerParameters
 ) :
     Worker(mContext, workerParams), KoinComponent {
     private val viewModelJob = SupervisorJob()
