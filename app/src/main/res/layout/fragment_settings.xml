@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start|center_vertical"
-                android:text="Receive notifications"
+                android:text="Receive Notifications"
                 android:textColor="?attr/light_black_dark_white"
                 android:textSize="18sp"
                 android:textStyle="normal"
@@ -61,6 +61,16 @@
                 android:id="@+id/timerChoiceRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/optionOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/green"
+                    android:tag="0"
+                    android:text="OFF"
+                    android:textColor="?attr/light_black_dark_white" />
 
                 <RadioButton
                     android:id="@+id/option1Min"

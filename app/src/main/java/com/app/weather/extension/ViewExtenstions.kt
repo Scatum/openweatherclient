@@ -26,12 +26,6 @@ fun ImageView.loadImg(url: String?, placeHolderId: Int = R.drawable.ic_launcher_
         this.setImageResource(placeHolderId)
         return
     }
-    /*   Picasso.get()
-           .load(url)
-           .placeholder(placeHolderId)
-           .error(placeHolderId)
-           .into(this)*/
-
     Glide.with(context)
         .load(url)
         .into(this)

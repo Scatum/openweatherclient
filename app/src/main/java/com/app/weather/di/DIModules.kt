@@ -4,6 +4,7 @@ import com.app.weather.db.AppDatabase
 import com.app.weather.repository.LocalDataRepository
 import com.app.weather.repository.NetworkDataRepository
 import com.app.weather.service.*
+import com.app.weather.viewmodel.SettingsViewModel
 import com.app.weather.viewmodel.WeatherViewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -11,12 +12,13 @@ import org.koin.dsl.module
 
 val appRepositories: Module = module {
     single { NetworkDataRepository(get(), get()) }
-    single { LocalDataRepository(get(), get(), get()) }
+    single { LocalDataRepository(get(), get(), get(), get()) }
 }
 
 
 val appViewModels: Module = module {
     single { WeatherViewModel(get(), get(), get()) }
+    single { SettingsViewModel(get()) }
 }
 
 

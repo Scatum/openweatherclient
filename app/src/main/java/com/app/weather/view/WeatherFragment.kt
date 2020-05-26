@@ -3,7 +3,6 @@ package com.app.weather.view
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.app.weather.R
@@ -27,6 +26,7 @@ class WeatherFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupView()
+        showLoading()
         initData()
     }
 
@@ -37,11 +37,12 @@ class WeatherFragment : BaseFragment() {
     }
 
     private fun initData() {
-
-        showLoading()
         weatherViewModel.getForecastsWeatherData()
             .observe(viewLifecycleOwner, Observer { triple ->
-                headerTextView?.text = triple.first.name//to show from where getting data
+                triple.third?.let {
+                    headerTextView?.text = triple.first.name
+                    //to show from where getting data
+                }
                 if (triple.first == DataType.UPDATED) {
                     setupUpdatedData(triple)
                 } else {
@@ -71,17 +72,12 @@ class WeatherFragment : BaseFragment() {
             }
         }
 
-
     }
 
     override fun onDestroyView() {
-        Log.i("destroy", " onDestroyView")
+        hideLoading()
         super.onDestroyView()
     }
 
-    override fun onDestroy() {
-        Log.i("destroy", " onDestroy")
-        super.onDestroy()
-    }
 
 }

@@ -36,10 +36,8 @@ open class BaseActivity : AppCompatActivity() {
     private fun checkInterfaceMode() {
         if (preferenceService.getInterfaceMode() == AppTheme.LIGHT) {
             setTheme(R.style.LightTheme)
-            // AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         } else {
             setTheme(R.style.DarkTheme)
-            //  AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
         }
     }
 

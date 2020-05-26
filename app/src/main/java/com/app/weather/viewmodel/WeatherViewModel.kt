@@ -65,12 +65,9 @@ class WeatherViewModel(
             }
         }
 
-        //  viewModelScope.launch {// we shouldn't close viewModelScope
         publishStoredData()
         publishUpdatedData()
-        // }
 
-        // return returnValue
     }
 
     override fun onCleared() {

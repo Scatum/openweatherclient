@@ -79,15 +79,7 @@ dependencies {
     implementation 'com.android.support:support-v4:29.+'
 
 
-/*    //DI
-    // Koin AndroidX Scope features
-    implementation "org.koin:koin-androidx-scope:$koin_version"
-    // Koin AndroidX ViewModel features
-    implementation "org.koin:koin-androidx-viewmodel:$koin_version"
-    // Koin AndroidX Experimental features
-    implementation "org.koin:koin-androidx-ext:$koin_version"*/
-
-    // Koin
+    // Koin DI
     implementation "org.koin:koin-android:2.1.5"
     implementation "org.koin:koin-androidx-scope:2.1.5"
     implementation "org.koin:koin-androidx-viewmodel:2.1.5"

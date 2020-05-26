@@ -5,6 +5,7 @@ import android.util.Log
 import androidx.work.Worker
 import androidx.work.WorkerParameters
 import com.app.weather.repository.NetworkDataRepository
+import com.app.weather.service.NetworkService
 import kotlinx.coroutines.*
 import org.koin.core.KoinComponent
 import org.koin.core.inject
@@ -20,12 +21,15 @@ class AppWorker(
 
 
     private val networkDataRepository: NetworkDataRepository by inject()
+    private val networkService: NetworkService by inject()
     override fun doWork(): Result {
         try {
 
             Log.e("doWork", "start")
             uiScope.launch {
-                networkDataRepository.getUpdatedForecastsWeatherData()
+                if (networkService.isNetworkAvailable()) {
+                    networkDataRepository.getUpdatedForecastsWeatherData()
+                }
             }
             return Result.success()
         } catch (e: Exception) {

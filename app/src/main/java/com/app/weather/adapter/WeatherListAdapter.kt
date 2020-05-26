@@ -22,8 +22,8 @@ class WeatherListAdapte() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     /**
      * I Usually don't use entity for any adapter.
-    I will use weatherEntity  inside this adapter because there
-    is no good reason to create a new model which will consist by this entity
+       I will use weatherEntity  inside this adapter because there
+       is no need to create a new model which will consist by this entity
      * */
     private val weatherList: MutableList<WeatherEntity> = mutableListOf()
 
@@ -41,7 +41,7 @@ class WeatherListAdapte() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         @SuppressLint("SetTextI18n")
         internal fun bind(position: Int) {
-            val item = weatherList?.get(position)
+            val item = weatherList[position]
             item?.let {
                 timezoneAndDay.text = "${it.timezone}  ${it.day}"
                 mainTemperature.text = "${it.tempDay}°C"
@@ -73,7 +73,7 @@ class WeatherListAdapte() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
         @SuppressLint("SetTextI18n")
         internal fun bind(position: Int) {
-            val item = weatherList?.get(position)
+            val item = weatherList[position]
             item?.let {
                 timezoneAndDay.text = "${it.timezone}  ${it.day}"
                 mainTemperature.text = "${it.tempDay}°C"
@@ -114,7 +114,7 @@ class WeatherListAdapte() : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     }
 
     override fun getItemCount(): Int {
-        return if (weatherList.isNullOrEmpty()) 0 else weatherList?.size!!
+        return if (weatherList.isNullOrEmpty()) 0 else weatherList.size
     }
 
     fun isEmpty() = weatherList.isNullOrEmpty()
